@@ -4,7 +4,7 @@ console.log(galleryItems)
 // Change code below this line
 
 const gallery = document.querySelector('.gallery')
-const items = []
+
 
 function createGalleryMarkup(galleryItems) {
 	return galleryItems.map(({preview, original, description }) =>
@@ -20,25 +20,7 @@ function createGalleryMarkup(galleryItems) {
 	</div>`).join('');
 }
 
-function onGalleryClick(evt) {
-
-}
-
-function showModalOriginalImage(source) {
-}
-
-function galleryImg() {
-	const gallery = document.querySelector('.gallery');
-
-	if (!gallery) {
-		console.log('Error: invalid markup!');
-		return;
-	}
-
-	gallery.innerHTML = createGalleryMarkup(galleryItems);
-}
-
-gallery.append(...items)
+gallery.innerHTML = createGalleryMarkup(galleryItems);
 
 gallery.addEventListener('click', e => {
     e.preventDefault();
@@ -57,5 +39,4 @@ gallery.addEventListener('click', e => {
  
 	})
 
-	galleryImg();
 
